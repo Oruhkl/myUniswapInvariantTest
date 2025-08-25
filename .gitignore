@@ -1,0 +1,10 @@
+node_modules/
+build/
+# echidna.yaml
+out/
+corpus/
+medusa/
+echidna/
+cache/
+.idea
+lib
