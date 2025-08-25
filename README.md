@@ -85,8 +85,8 @@ assert(beforeK > afterK);
 ### Installation
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd uniswap-v2-fuzz
+git clone https://github.com/Oruhkl/myUniswapInvariantTest
+cd myUniswapInvariantTest
 
 # Install dependencies
 yarn install
@@ -99,16 +99,6 @@ forge build
 ```
 
 ## Running Fuzzing Tests
-
-### Echidna
-```bash
-# Run Echidna fuzzing campaign
-echidna test/fuzz/FuzzProps.sol --contract FuzzProps --config echidna.yaml
-
-# Run with custom parameters
-echidna test/fuzz/FuzzProps.sol --contract FuzzProps --test-limit 10000
-```
-
 ### Medusa
 ```bash
 # Run Medusa fuzzing campaign
@@ -126,18 +116,9 @@ forge test
 # Run with gas reporting
 forge test --gas-report
 
-# Run specific fuzz test
-forge test --match-contract FuzzUnit
 ```
 
 ## Configuration
-
-### Echidna Configuration (`echidna.yaml`)
-Key parameters for fuzzing campaigns:
-- Test limit and timeout settings
-- Contract deployment parameters  
-- Assertion checking modes
-- Coverage tracking options
 
 ### Medusa Configuration (`medusa.json`)
 - Fuzzing targets and entry points
@@ -201,7 +182,6 @@ When extending the fuzzing suite:
 
 ## References
 - [Uniswap V2 Core Whitepaper](https://uniswap.org/whitepaper.pdf)
-- [Echidna Documentation](https://github.com/crytic/echidna)
 - [Medusa Documentation](https://github.com/crytic/medusa)
 - [Foundry Documentation](https://book.getfoundry.sh/)
 
